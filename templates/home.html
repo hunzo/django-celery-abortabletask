@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="inputCode" class="form-label">Delay Time*</label>
+        <input type="text" class="form-control" id="inputCode" aria-describedby="emailHelp" name="code" required>
+        <div id="codeHelp" class="form-text">enter delay time</div>
+    </div>
+
+    {% include 'message.inc.html' %}
+
+    <button type="submit" class="btn btn-secondary w-100 mt-2">Start</button>
+</form>
+
+
+
+{% include 'tasks.inc.html' %}
+
+
+{% endblock %}
